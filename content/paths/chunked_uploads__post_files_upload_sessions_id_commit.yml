@@ -64,9 +64,9 @@ responses:
     description: |-
       Returns when all chunks have been uploaded but not yet processed.
 
-      Inspect the upload session to get more information about the
-      progress of processing the chunks, then retry committing the file
-      when all chunks have processed.
+      Inspect the upload session by checking the retry-after header, then retry committing the file
+      when all chunks have processed, which is after the number of seconds specified.
+
     headers:
       Retry-After:
         description: |-
